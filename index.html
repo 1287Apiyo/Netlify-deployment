@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather Dashboard</title>
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        background-color: #f0f0f0;
+        color: #333;
+      }
+      .weather-dashboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+      header {
+        margin-bottom: 20px;
+      }
+      #search-form {
+        display: flex;
+        justify-content: center;
+      }
+      .input-field {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 250px;
+      }
+      .submit-button {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .submit-button:hover {
+        background-color: #0056b3;
+      }
+      .weather-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .city-info {
+        margin-bottom: 20px;
+      }
+      .city-name {
+        font-size: 36px;
+        margin: 0;
+      }
+      .weather-stats {
+        font-size: 18px;
+        margin: 0;
+      }
+      .temperature-info {
+        display: flex;
+        align-items: center;
+        font-size: 48px;
+      }
+      .temperature-icon {
+        margin-right: 10px;
+      }
+      footer {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="weather-dashboard">
+      <header>
+        <form id="search-form">
+          <input
+            type="text"
+            placeholder="Search for a city..."
+            required
+            class="input-field"
+            id="search-input"
+          />
+          <button type="submit" class="submit-button">Find</button>
+        </form>
+      </header>
+      <main>
+        <section class="weather-info">
+          <div class="city-info">
+            <h1 class="city-name" id="current-city">Tokyo</h1>
+            <p class="weather-stats">
+              <span id="current-date"></span>, light rain <br />
+              Humidity: <strong>76%</strong>, Wind: <strong>5.5 km/h</strong>
+            </p>
+          </div>
+          <div class="temperature-info">
+            <span class="temperature-icon">🌥️</span>
+            <span class="temperature-value">19</span>
+            <span class="temperature-unit">°C</span>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>
+          Created by
+          <a href="#" target="_blank">Anne Apiyo</a>. Check out the
+          <a href="#" target="_blank">GitHub repository</a> and
+          <a href="#" target="_blank">view it on Netlify</a>.
+        </p>
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
